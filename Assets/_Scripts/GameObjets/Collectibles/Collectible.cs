@@ -1,18 +1,19 @@
+using System;
 using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-	private void Update()
-	{
-		
-		// Check if the collectible is off the screen
-		if (transform.position.y < -6.0f)
-		{
-			// Destroy the collectible
-			Destroy(gameObject);
-		}
-	}
+	// Get the GameManager component
+	private GameManager _gameManager;
+
+	[SerializeField] private float _scoreToAdd = 1.0f;
 	
+	private void Start()
+	{
+		// Get the GameManager component
+		_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+	}
+
 	// Check if 2d box collider is colliding with the player
 	private void OnTriggerEnter2D(Collider2D other)
 	{
@@ -21,8 +22,9 @@ public class Collectible : MonoBehaviour
 		{
 			// Destroy the collectible
 			Destroy(gameObject);
-
-			Debug.Log("Hit");
+			
+			// add to the score
+			_gameManager.AddScore(_scoreToAdd);
 		}
 	}
 }

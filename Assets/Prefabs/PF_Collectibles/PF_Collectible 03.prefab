@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 9145285360345886415}
   - component: {fileID: 4792179497522153242}
   - component: {fileID: 6291611112973017452}
+  - component: {fileID: 916881743146864287}
   m_Layer: 0
-  m_Name: Collectible 03
+  m_Name: PF_Collectible 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,3 +186,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 3
+--- !u!114 &916881743146864287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090272387065545379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ab3c6eb2628754397d9a857cddd9ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
