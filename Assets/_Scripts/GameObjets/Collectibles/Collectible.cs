@@ -2,19 +2,27 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-	[SerializeField] private float _moveSpeed = 3.0f;
-	
-	
 	private void Update()
 	{
-		// Move the collectible down
-		transform.Translate(Vector3.down * (_moveSpeed * Time.deltaTime));
 		
 		// Check if the collectible is off the screen
 		if (transform.position.y < -6.0f)
 		{
 			// Destroy the collectible
 			Destroy(gameObject);
+		}
+	}
+	
+	// Check if 2d box collider is colliding with the player
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		// Check if the player is colliding with the collectible
+		if (other.gameObject.CompareTag("Player"))
+		{
+			// Destroy the collectible
+			Destroy(gameObject);
+
+			Debug.Log("Hit");
 		}
 	}
 }
