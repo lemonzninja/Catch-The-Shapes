@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     private StartButton _startButton;
     
+    private CollectibleSpawner _collectibleSpawner;
+    
     // Reference to the title UI
     [SerializeField] private GameObject _titlerUI;
     // Reference to the Game UI
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
    {
        // Get the StartButton component
        _startButton = GameObject.Find("StartButton").GetComponent<StartButton>();
+       
    }
 
     private void Update()
