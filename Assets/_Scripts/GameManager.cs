@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    // Reference to the StartButton component
     private StartButton _startButton;
     
-    private CollectibleSpawner _collectibleSpawner;
     
     // Reference to the title UI
     [SerializeField] private GameObject _titlerUI;
@@ -18,13 +16,13 @@ public class GameManager : MonoBehaviour
     private float _score = 0.0f;
     [SerializeField] private TextMeshProUGUI _scoreText;
     
-   private void Start()
-   {
-       // Get the StartButton component
-       _startButton = GameObject.Find("StartButton").GetComponent<StartButton>();
-       
-   }
-
+    private void Start()
+    {
+        // Get the StartButton component
+        _startButton = GameObject.Find("StartButton").GetComponent<StartButton>();
+           
+    }
+    
     private void Update()
     {
          // Check if the game has started
