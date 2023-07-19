@@ -19,12 +19,7 @@ public class PlayerController : MonoBehaviour
         _transform = GetComponent<Transform>();
         _position = _transform.position;
     }
-
-    private void Update()
-    {
-        MovePlayer();
-    }
-
+    
     public void MovePlayer()
     {
         // Get left and right input.

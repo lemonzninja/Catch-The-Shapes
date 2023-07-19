@@ -1,46 +1,62 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class GameManager : MonoBehaviour
+namespace _Scripts
 {
-    // Reference to the StartButton component
-    private StartButton _startButton;
-    
-    
-    // Reference to the title UI
-    [SerializeField] private GameObject _titlerUI;
-    // Reference to the Game UI
-    [SerializeField] private GameObject _gameUI;
-    
-    // Score
-    private float _score = 0.0f;
-    [SerializeField] private TextMeshProUGUI _scoreText;
-    
-    private void Start()
+    public class GameManager : MonoBehaviour
     {
-        // Get the StartButton component
-        _startButton = GameObject.Find("StartButton").GetComponent<StartButton>();
-           
-    }
+        // Reference to the StartButton component
+        private StartButton _startButton;
+        // Reference to the PlayerController component
+        private PlayerController _playerController;
     
-    private void Update()
-    {
-         // Check if the game has started
-         if (_startButton.gameStarted)
-         {   
+        // Reference to the title UI
+        [SerializeField] private GameObject titleUI;
+        // Reference to the Game UI
+        [SerializeField] private GameObject gameUI;
+    
+        // The player object
+        [SerializeField] private GameObject player;
+        
+        // Score
+        private float _score = 0.0f;
+        [SerializeField] private TextMeshProUGUI scoreText;
+        
+        private void Start()
+        {
+            // Get the StartButton component
+            _startButton = GameObject.Find("StartButton").GetComponent<StartButton>();
+            
+            // Get the PlayerController component
+            _playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        }
+    
+        private void Update()
+        {
+            // Check if the game has started
+            if (_startButton.gameStarted)
+            {   
                 // Hide the title UI and show the game UI
-                _titlerUI.SetActive(false);
+                titleUI.SetActive(false);
                 // Show the game UI
-                _gameUI.SetActive(true);
-         }
-    }
+                gameUI.SetActive(true);
+                
+                // Show the player
+                player.GetComponent<Renderer>().enabled = true;
+                
+                // Allow the player to move
+                _playerController.MovePlayer();
+            }
+        }
     
-    // A function to add to the score
-    public void AddScore(float scoreToAdd)
-    {
-        // Add to the score
-        _score += scoreToAdd;
-        // Update the score text
-        _scoreText.text = "" + _score;
+        // A function to add to the score
+        public void AddScore(float scoreToAdd)
+        {
+            // Add to the score
+            _score += scoreToAdd;
+            // Update the score text
+            scoreText.text = "" + _score;
+        }
     }
 }
