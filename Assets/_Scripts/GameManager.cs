@@ -1,6 +1,6 @@
+using _Scripts.GameObjets.Player;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace _Scripts
 {
@@ -20,7 +20,7 @@ namespace _Scripts
         [SerializeField] private GameObject player;
         
         // Score
-        private float _score = 0.0f;
+        [SerializeField] private float score;
         [SerializeField] private TextMeshProUGUI scoreText;
         
         private void Start()
@@ -54,9 +54,9 @@ namespace _Scripts
         public void AddScore(float scoreToAdd)
         {
             // Add to the score
-            _score += scoreToAdd;
+            score += scoreToAdd;
             // Update the score text
-            scoreText.text = "" + _score;
+            scoreText.text = "" + score;
         }
     }
 }
