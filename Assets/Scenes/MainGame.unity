@@ -223,6 +223,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1277871785138430775, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
+      propertyPath: spawnPos
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277871785138430775, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
+      propertyPath: repeatRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277871785138430775, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
+      propertyPath: startDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277871785138430775, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
+      propertyPath: maxSpawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277871785138430775, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
+      propertyPath: minSpawnInterval
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277871785138430775, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
+      propertyPath: collectiblesObjectsArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277871785138430775, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
+      propertyPath: collectiblesObjectsArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 7857159788458031624, guid: a4b1f7a6106053f4b9b26ce74f7fdb7f, type: 3}
+    - target: {fileID: 1277871785138430775, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
+      propertyPath: collectiblesObjectsArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 5090272387065545379, guid: 3b0d0d1cb062a2d4b8e0df1f4efbec23, type: 3}
+    - target: {fileID: 1277871785138430775, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
+      propertyPath: collectiblesObjectsArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 7426839164099247171, guid: 339e515bd0a218543ac954f87d5087b7, type: 3}
     - target: {fileID: 4278343297155292896, guid: 66147ea365f780243917a76b98faa3f0, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -346,6 +382,14 @@ PrefabInstance:
     - target: {fileID: 2447821853327424501, guid: 596a14470bcf8cd4989c7caedae736a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192089989830971116, guid: 596a14470bcf8cd4989c7caedae736a3, type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192089989830971116, guid: 596a14470bcf8cd4989c7caedae736a3, type: 3}
+      propertyPath: screenBounds
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
