@@ -19,9 +19,6 @@ namespace _Scripts
         // The player object
         [SerializeField] private GameObject player;
         
-        // Score
-        [SerializeField] private float score;
-        [SerializeField] private TextMeshProUGUI scoreText;
         
         private void Start()
         {
@@ -48,15 +45,6 @@ namespace _Scripts
                 // Allow the player to move
                 _playerController.MovePlayer();
             }
-        }
-    
-        // A function to add to the score
-        public void AddScore(float scoreToAdd)
-        {
-            // Add to the score
-            score += scoreToAdd;
-            // Update the score text
-            scoreText.text = "" + score;
         }
     }
 }

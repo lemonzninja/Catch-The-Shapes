@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-	// Get the GameManager component
-	private GameManager _gameManager;
-
+	// Get the ScoreManager component
+    private ScoreManager _scoreManager;
+	
 	[SerializeField] private float _scoreToAdd = 1.0f;
 	
 	private void Start()
 	{
-		// Get the GameManager component
-		_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+		// Get the ScoreManager component
+		_scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 	}
 
 	// Check if 2d box collider is colliding with the player
@@ -23,9 +23,9 @@ public class Collectible : MonoBehaviour
 		{
 			// Destroy the collectible
 			Destroy(gameObject);
-			
-			// add to the score
-			_gameManager.AddScore(_scoreToAdd);
+            
+			// Add to the score
+			_scoreManager.AddScore(_scoreToAdd);
 		}
 	}
 }
